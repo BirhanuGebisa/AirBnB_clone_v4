@@ -154,8 +154,8 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Abiola Bello - [Github](https://github.com/abybells) 
-Birhanu Gebisa - [Github](https://github.com/birhanugebisa)
+- Abiola Bello - [Github](https://github.com/abybells) 
+- Birhanu Gebisa - [Github](https://github.com/birhanugebisa)
 
 
 Second part of Airbnb: Joann Vuong
