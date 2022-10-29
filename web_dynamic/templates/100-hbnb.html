@@ -29,10 +29,10 @@
               <ul>
                 {% for state in states|dictsort %}
                 <li>
-                  <h2><input class="stateCheckbox" type="checkbox" data-id="{{ state.id }}" data-name="{{ state.name }}">{{ state[0] }}</h2>
+                  <h2><input class="stateCheckBox" type="checkbox" data-id="{{ state.id }}" data-name="{{ state.name }}">{{ state[0] }}</h2>
                   <ul>
                     {% for city in state[1].cities|sort(attribute='name') %}
-                    <li><input class="cityCheckbox" type="checkbox" data-id="{{ city.id }}" data-name="{{city.name }}">{{ city.name }}</li>
+                    <li><input class="cityCheckBox" type="checkbox" data-id="{{ city.id }}" data-name="{{city.name }}">{{ city.name }}</li>
                     {% endfor %}
                   </ul>
                  </li>
