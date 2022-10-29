@@ -74,6 +74,23 @@ window.addEventListener('load', function () {
       });
     });
   
+  // get reviews for each place
+  $('.reviewSpan').click(function (event) {
+    $.ajax('http://0.0.0.0:5001/api/v1/places/' + $(this).attr('data-id') + '/reviews').done(function (data) {
+      $('span').addClass('hideReview');
+      if ($('.reviewSpan').text('show')) {
+        for (const review of data) {
+          $(('.reviews ul').append(`<li>${review.text}</li>`);
+        }
+        console.log($('.reviewSpan li'));
+        $('.hideReview').text('hide'))
+      } else if ($('.hideReview').text('hide')){
+        $('.reviews ul').empty();
+        $('.reviewSpan').text('show');
+      }
+    });
+  });
+  
   // filter states, city
   $('stateCheckBox').click(function () {
     if ($(this).prop('checked')) {
